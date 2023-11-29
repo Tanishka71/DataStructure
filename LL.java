@@ -4,9 +4,9 @@ public class LL {
 
 	public static void main(String []args) {
 		CustomLL linkedList=new CustomLL();
-	     linkedList.addLast(70);
-	     linkedList.addLast(30);
-	     linkedList.addLast(56);
+	     linkedList.addPos(70);
+	     linkedList.addPos(30);
+	     linkedList.addPos(56);
          linkedList.display();
 }
 }
