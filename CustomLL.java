@@ -18,14 +18,17 @@ public class CustomLL {
 * @params:Integer data
 * @return:none
 */
- public void addFirst(int element) {
+ public void addLast(int element) {
  Node newNode=new Node(element);
  if(head ==null) {
 	   head=newNode;
  }
  else {
-	   newNode.next=head;
-	   head=newNode;
+	   Node curr=head;
+	   while(curr.next != null) {
+		   curr=curr.next;
+	   }
+	   curr.next=newNode;
  }
  
 }
