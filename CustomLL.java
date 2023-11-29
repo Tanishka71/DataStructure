@@ -12,29 +12,36 @@ class Node{
 //@desc:custom linked list class that has all the functions
 public class CustomLL {
    Node head=null;
-   
 /*
 * @desc:add elements in linked list
 * @params:Integer data
 * @return:none
 */
-  public void addPos(int element,int pos) {
-	 Node newNode=new Node(element);
-	 if(head ==null) {
-		   head=newNode;
-	 }
-	 else if(pos == 1) {
-		 head.next=newNode;
-	 }
-	 else {
-		 Node curr=head;
-		 for(int i=1;i<pos-1 && curr.next != null;i++) {
-			 curr=curr.next;
-		 }
-		 newNode.next=curr.next;
-		 curr.next=newNode;
-	 }
-  }
+ public void addFirst(int element) {
+ Node newNode=new Node(element);
+ if(head ==null) {
+	   head=newNode;
+ }
+ else {
+	   newNode.next=head;
+	   head=newNode;
+ }
+ 
+}
+ 
+ /*
+ * @desc:DEL FIRST elements in linked list
+ * @params:none
+ * @return:none
+ */
+public  void delFirst() {
+ if(head == null) {
+	   System.out.println("Empty");
+ }
+ else {
+	   head=head.next;
+ }
+}
    
   /*
   * @desc:display the elements of the LL
