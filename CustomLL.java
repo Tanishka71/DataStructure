@@ -47,7 +47,28 @@ public class CustomLL {
 	return 0;
    }
 
-
+/*
+* @desc:add elements in linked list
+* @params:Integer data
+* @return:none
+*/
+	public void addPos(int element,int pos) {
+	 Node newNode=new Node(element);
+	 if(head ==null) {
+		   head=newNode;
+	 }
+	 else if(pos == 1) {
+		 head.next=newNode;
+	 }
+	 else {
+		 Node curr=head;
+		 for(int i=1;i<pos-1 && curr.next != null;i++) {
+			 curr=curr.next;
+		 }
+		 newNode.next=curr.next;
+		 curr.next=newNode;
+	 }
+  }
    
    
   /*
