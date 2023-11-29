@@ -18,17 +18,17 @@ public class CustomLL {
 * @params:Integer data
 * @return:none
 */
-  public  void add(int element) {
-	   Node newNode=new Node(element);
-	   if(head ==null) {
-		   head=newNode;
-	   }
-	   else {
-		   newNode.next=head;
-		   head=newNode;
-	   }
-	   
-   }
+ public void addFirst(int element) {
+ Node newNode=new Node(element);
+ if(head ==null) {
+	   head=newNode;
+ }
+ else {
+	   newNode.next=head;
+	   head=newNode;
+ }
+ 
+}
    
   /*
   * @desc:display the elements of the LL
@@ -44,5 +44,6 @@ public class CustomLL {
 	   System.out.println(curr.data);
    }
 }
+
 
  
