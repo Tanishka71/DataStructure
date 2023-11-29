@@ -30,24 +30,24 @@ public class CustomLL {
 }
  
  /*
- * @desc:DEL last elements in linked list
+ * @desc:FIND AN ELEMENT  in linked list
  * @params:none
  * @return:none
  */
-public	void delLast() {
-		if(head==null) {
-			System.out.println("Empty");
-		}
-		else {
-			Node curr=head;
-			Node prev=curr;
-			while(curr.next != null) {
-				prev=curr;
-				curr=curr.next;
-			}
-			prev.next=null;
-		}
-	}
+  public int find(int ele) {
+	   int pos=1;
+	   Node curr=head;
+	   while(curr.next != null) {
+		   if(curr.data== ele) {
+			   return pos;
+		   }
+		   curr=curr.next;
+		   pos++;
+	   }
+	return 0;
+   }
+
+
    
    
   /*
