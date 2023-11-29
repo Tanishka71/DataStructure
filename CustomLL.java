@@ -30,18 +30,25 @@ public class CustomLL {
 }
  
  /*
- * @desc:DEL FIRST elements in linked list
+ * @desc:DEL last elements in linked list
  * @params:none
  * @return:none
  */
-public  void delFirst() {
- if(head == null) {
-	   System.out.println("Empty");
- }
- else {
-	   head=head.next;
- }
-}
+public	void delLast() {
+		if(head==null) {
+			System.out.println("Empty");
+		}
+		else {
+			Node curr=head;
+			Node prev=curr;
+			while(curr.next != null) {
+				prev=curr;
+				curr=curr.next;
+			}
+			prev.next=null;
+		}
+	}
+   
    
   /*
   * @desc:display the elements of the LL
