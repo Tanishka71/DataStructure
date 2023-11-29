@@ -9,5 +9,6 @@ public class LL {
 	     linkedList.addFirst(56);
          int pos=linkedList.find(30);
          System.out.println("it is present at: "+pos);
+		linkedList.addPos(40,pos+1);
 }
 }
