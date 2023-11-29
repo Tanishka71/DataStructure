@@ -17,6 +17,5 @@ class LLtest {
 	    obj.addFirst(56);
 		assertEquals(2,obj.find(30), 
 				"Find method should give the position of the key");
-		obj.addPos(40,3);
 	}
 }
